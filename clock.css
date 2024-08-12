@@ -1,0 +1,120 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Hero section styling */
+  .hero {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, #08001f, #30197d); /* Adjusted gradient angle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+  }
+  /* Title styling :Digital Clock*/
+  .title {
+    font-size: 2vw;
+    color:  rgba(119, 14, 240, 0.347);
+    flex-direction: start;
+    justify-content: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5rem;
+  }
+  
+  /* Centered container styling */
+  .container {
+    width: 800px;
+    height: 180px;
+    max-width: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(54, 11, 104, 0.347);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    padding: 2%;
+  }
+  
+  /* Clock styling */
+  .clock {
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 8, 8, 0.05);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /*Timing hours mins sec counter*/
+  .clock span {
+    font-size: 8vw;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    color: #1b22f4; /* Brightened text color */
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Circles */
+  .container::before, 
+  .container::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, #0800ff, transparent);
+    z-index: -1;
+    opacity: 0.7;
+  }
+  /*Left top circle */
+  .container::before {
+    width: 200px;
+    height: 200px;
+    left: -50px;
+    top: -70px;
+  }
+  /*Bottom right circle*/
+  .container::after {
+    width: 200px;
+    height: 200px;
+    right: -50px;
+    bottom: -70px;
+  }
+  
+  /* Small text under time values */
+  .clock span::after {
+    font-size: 16px;
+    color: #00fff7;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.9;
+  }
+  
+  #Hours::after {
+    content: "Hours";
+  }
+  
+  #Minutes::after {
+    content: "Mins";
+  }
+  
+  #Seconds::after {
+    content: "Secs";
+  }
+  
